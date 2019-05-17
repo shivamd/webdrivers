@@ -31,9 +31,10 @@ through Selenium.
 
 ### Specific Drivers
 
-If you want webdrivers to only manage specific drivers you can specify as follows:
+If you want webdrivers to only manage specific drivers you can specify one or more as follows:
 ```ruby
 require 'webdrivers/chromedriver'
+require 'webdrivers/firefox'
 require 'webdrivers/iedriver'
 ```
 
@@ -57,11 +58,8 @@ Webdrivers::Chromedriver.required_version = '2.46'
 # Firefox
 Webdrivers::Geckodriver.required_version  = '0.23.0'
 
-# Microsoft Internet Explorer
+# Internet Explorer
 Webdrivers::IEdriver.required_version     = '3.14.0'
-
-# Microsoft Edge
-Webdrivers::MSWebdriver.required_version  = '17134'
 ```
 
 You can explicitly trigger the update in your code, but this will happen automatically when the driver is initialized:
@@ -161,9 +159,5 @@ see LICENSE.txt for full details and copyright.
 
 ## Contributing
 
-Bug reports and pull requests are welcome [on GitHub](https://github.com/titusfortner/webdrivers). Run `bundle exec rake` and squash the commits in your PRs.
-
-## Copyright
-
-Copyright (c) 2017-2019 Titus Fortner
-See LICENSE for details
+Bug reports and pull requests are welcome [on GitHub](https://github.com/titusfortner/webdrivers). 
+Run `bundle exec rake` and squash the commits in your PRs.
